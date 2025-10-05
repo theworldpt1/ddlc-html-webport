@@ -2,33 +2,178 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doki Doki Literature Club - Web Port</title>
     
-    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="estilos/inicio.css">
+    <link rel="stylesheet" href="estilos/main.css">
+    
+    <title translate="no">Doki Doki Literature Club</title>
 </head>
 <body>
-
-    <div id="game"></div>
-
-    <script src="js/utils.js"></script>
-    <script src="js/core.js"></script>
-    
-    <script>
-        // Once core.js is loaded, this code calls the main function 
-        // to start the game and attach it to the 'game' div.
-        // The original port uses a function named 'StartGame'.
+    <div class="menu-container" id="pantalla">
+        <aside class="left"></aside>
+        <aside class="menu__aside">
+            <div class="logo">
+                <img src="imagenes/logo.png" id="logo">
+            </div>
+            <div class="botones hidden" id="menu-btns">
+                <p class="ok ho" id="new-game" translate="no">New Game</p>
+                <p class="ok ho" id="load-game" translate="no">Load Game</p>
+                <p class="ok ho" id="settings" translate="no">Settings</p>
+                <p class="ok ho" id="help" translate="no">Help</p>
+                <p class="ok ho" id="quit" translate="no">Quit</p>
+            </div>
+        </aside>
         
-        // This check ensures 'StartGame' exists before trying to call it.
-        if (typeof StartGame === 'function') {
-            // Pass the ID of the div where the game should appear.
-            StartGame('game'); 
-        } else {
-            // If the game is still black, check your browser's console 
-            // for this message and any other errors.
-            console.error("Game launch failed: The 'StartGame' function was not found in the loaded JavaScript.");
-        }
-    </script>
 
+        <div class="cuadro">
+            <div class="lunares">
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+            </div>
+            <div class="lunares">
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+            </div>
+            <div class="lunares">
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+            </div>
+            <div class="lunares">
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+            </div>
+            <div class="lunares">
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+            </div>
+            <div class="lunares">
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+            </div>
+            <div class="lunares">
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+            </div>
+            <div class="lunares">
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+            </div>
+            <div class="lunares">
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+            </div>
+            <div class="lunares">
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+                <div class="lunar"></div>
+            </div>
+        </div>
+
+        <img class="inicio s" id="j" src="imagenes/inicio_s.png" alt="">
+        <img class="inicio y" src="imagenes/inicio_y.png" alt="">
+        <img class="inicio m" src="imagenes/inicio_m.png" alt="">
+        <img class="inicio n" src="imagenes/inicio_n.png" alt="">
+
+    </div>
+    
+    <script src="js/utils.js" type="module"></script>
+    <script src="js/core.js" type="module"></script>
+    
+    <script src="scripts/cargarSonido.js" type="module"></script>
+    <script src="scripts/inicio.js" type="module"></script>
+    
+    <script type="module">
+        // It's best to put this call inside scripts/inicio.js, 
+        // but if that fails, this fallback helps ensure the game starts.
+        window.addEventListener('load', () => {
+            if (typeof StartGame === 'function') {
+                // 'pantalla' is the ID of the main div in your HTML
+                StartGame('pantalla'); 
+            } else {
+                console.warn("StartGame function not found inline. Hoping it's in a module.");
+            }
+        });
+    </script>
 </body>
 </html>
