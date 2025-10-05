@@ -1,0 +1,24 @@
+/* Example CSS for the game container */
+
+body {
+    /* Center the game container on the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure it takes up the full viewport height */
+    margin: 0;
+    background-color: #111; /* Dark background for a visual novel look */
+}
+
+#game {
+    /* Set the desired size for the game window (e.g., standard DDLC resolution) */
+    width: 960px;   /* Standard width */
+    height: 540px;  /* Standard 16:9 height */
+    
+    /* Make sure the game doesn't overflow the container */
+    overflow: hidden; 
+    
+    /* Add a border to make it look like an application window (optional) */
+    border: 2px solid #333;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
