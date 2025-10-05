@@ -15,12 +15,18 @@
     <script src="js/core.js"></script>
     
     <script>
-        // This is the function call that tells the 'core.js' engine to start.
-        // The original project used a function called 'StartGame' to begin.
+        // Once core.js is loaded, this code calls the main function 
+        // to start the game and attach it to the 'game' div.
+        // The original port uses a function named 'StartGame'.
+        
+        // This check ensures 'StartGame' exists before trying to call it.
         if (typeof StartGame === 'function') {
+            // Pass the ID of the div where the game should appear.
             StartGame('game'); 
         } else {
-            console.error("The StartGame function was not found in core.js. The game cannot launch.");
+            // If the game is still black, check your browser's console 
+            // for this message and any other errors.
+            console.error("Game launch failed: The 'StartGame' function was not found in the loaded JavaScript.");
         }
     </script>
 
