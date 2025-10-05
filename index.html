@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doki Doki Literature Club - Web Port</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="css/style.css"> 
 </head>
 <body>
 
     <div id="game"></div>
 
     <script src="js/utils.js"></script>
-    
     <script src="js/core.js"></script>
+    
+    <script>
+        // This is the function call that tells the 'core.js' engine to start.
+        // The original project used a function called 'StartGame' to begin.
+        if (typeof StartGame === 'function') {
+            StartGame('game'); 
+        } else {
+            console.error("The StartGame function was not found in core.js. The game cannot launch.");
+        }
+    </script>
 
 </body>
 </html>
